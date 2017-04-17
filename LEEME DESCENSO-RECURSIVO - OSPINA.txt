@@ -1,0 +1,4 @@
+en entrada.txt se pone la expresión terminada por $
+se ejecuta Aritmetica
+Si la expresión es correcta se imprime que fue exitoso,
+si la expresión es erronea se lanza una excepcion

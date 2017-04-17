@@ -20,6 +20,7 @@ public class FileReader {
         try {
             BufferedReader in = new BufferedReader(new java.io.FileReader("entrada.txt"));
             String test = in.readLine();
+            in.close();
             ts = new TokenStack(test);
         } catch (IOException ex) {
             System.out.println("Error I/O");

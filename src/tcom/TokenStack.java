@@ -13,17 +13,26 @@ import java.util.Stack;
  */
 public class TokenStack {
     
-    Stack stack;
+    Stack<Character> stack;
     
     public TokenStack(String string) {
-        stack = new Stack();
+        stack = new Stack<>();
         char[] array = string.toCharArray();
         for (int x = array.length - 1; x >= 0; x--) {
             stack.push(array[x]); 
         }
     }
     
-    public void sigToken() {
-        stack.pop();
+    public char sigToken() {
+        char value = stack.pop();
+        while (value == ' ') {
+            value = stack.pop();
+        }
+        return value;
+    }
+    
+    @Override
+    public String toString() {
+        return stack.toString();
     }
 }
